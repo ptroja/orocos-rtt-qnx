@@ -1,11 +1,11 @@
 /***************************************************************************
-  tag: Peter Soetens  Thu Oct 22 11:59:07 CEST 2009  rint.cpp
+  tag: Peter Soetens  Mon Jun 26 13:25:57 CEST 2006  gnuthreads.cxx
 
-                        rint.cpp -  description
+                        gnuthreads.cxx -  description
                            -------------------
-    begin                : Thu October 22 2009
-    copyright            : (C) 2009 Peter Soetens
-    email                : peter@thesourcworks.com
+    begin                : Mon June 26 2006
+    copyright            : (C) 2006 Peter Soetens
+    email                : peter.soetens@fmtc.be
 
  ***************************************************************************
  *   This library is free software; you can redistribute it and/or         *
@@ -36,25 +36,16 @@
  ***************************************************************************/
 
 
-/****************************************
-*										*
-*	Implementation of rint for MSVC		*
-*	Date: March 12, 2009				*
-*	Author: David Yu					*
-*                                       *
-*	Implementation of rint for QNX 		*
-*	Date: May 15, 2010  				*
-*	Author: Piotr Trojanek              *
-*										*
-****************************************/
-#include "os/rint.h"
-#include <cmath>
 
-#ifdef _MSC_VER
-double rint( double value )
-  {
-	return floor( value + 0.5 );
-  }
-#elif defined(__QNXNTO__)
-using std::rint;
-#endif
+#include <os/threads.hpp>
+
+namespace RTT
+{ namespace os {
+
+    const int LowestPriority = 1;
+
+    const int HighestPriority = 255;
+
+    const int IncreasePriority = 1;
+
+}}

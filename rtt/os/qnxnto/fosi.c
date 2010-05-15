@@ -1,11 +1,11 @@
 /***************************************************************************
-  tag: Peter Soetens  Thu Oct 22 11:59:07 CEST 2009  rint.cpp
+  tag: Peter Soetens  Mon Jan 10 15:59:15 CET 2005  fosi.c
 
-                        rint.cpp -  description
+                        fosi.c -  description
                            -------------------
-    begin                : Thu October 22 2009
-    copyright            : (C) 2009 Peter Soetens
-    email                : peter@thesourcworks.com
+    begin                : Mon January 10 2005
+    copyright            : (C) 2005 Peter Soetens
+    email                : peter.soetens@mech.kuleuven.ac.be
 
  ***************************************************************************
  *   This library is free software; you can redistribute it and/or         *
@@ -36,25 +36,6 @@
  ***************************************************************************/
 
 
-/****************************************
-*										*
-*	Implementation of rint for MSVC		*
-*	Date: March 12, 2009				*
-*	Author: David Yu					*
-*                                       *
-*	Implementation of rint for QNX 		*
-*	Date: May 15, 2010  				*
-*	Author: Piotr Trojanek              *
-*										*
-****************************************/
-#include "os/rint.h"
-#include <cmath>
+#include "fosi.h"
 
-#ifdef _MSC_VER
-double rint( double value )
-  {
-	return floor( value + 0.5 );
-  }
-#elif defined(__QNXNTO__)
-using std::rint;
-#endif
+

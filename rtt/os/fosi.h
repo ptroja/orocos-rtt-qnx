@@ -62,3 +62,7 @@
 #ifdef OROPKG_OS_WIN32
   #include "win32/fosi.h"
 #endif
+
+#ifdef OROPKG_OS_QNXNTO
+ #include "qnxnto/fosi.h"
+#endif
