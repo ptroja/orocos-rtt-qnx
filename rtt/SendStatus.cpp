@@ -1,4 +1,5 @@
 #include "SendStatus.hpp"
+#include <string>
 
 using namespace std;
 

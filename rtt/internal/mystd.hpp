@@ -42,6 +42,7 @@
 #include <functional>
 #include <algorithm>
 #include <vector>
+#include <iterator>
 
 // here we define some generally useful template stuff that is missing
 // from the STL..
