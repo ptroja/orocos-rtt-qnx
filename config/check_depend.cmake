@@ -141,6 +141,19 @@ else()
   set(OROPKG_OS_GNULINUX FALSE CACHE INTERNAL "" FORCE)
 endif()
 
+# Setup flags for QNX
+if(OROCOS_TARGET STREQUAL "qnxnto")
+  set(OROPKG_OS_QNXNTO TRUE CACHE INTERNAL "This variable is exported to the rtt-config.h file to expose our target choice to the code." FORCE)
+  set(CMAKE_C_FLAGS "-D_QNX_SOURCE -Wc,-std=c99")
+  set(CMAKE_SHARED_LINKER_FLAGS "-lm")
+
+  set(OS_HAS_TLSF TRUE)
+
+  list(APPEND OROCOS-RTT_DEFINITIONS "OROCOS_TARGET=${OROCOS_TARGET}") 
+else()
+  set(OROPKG_OS_QNXNTO FALSE CACHE INTERNAL "" FORCE)
+endif()
+
 # Setup flags for Mac-OSX
 if(OROCOS_TARGET STREQUAL "macosx")
   set(OROPKG_OS_MACOSX TRUE CACHE INTERNAL "This variable is exported to the rtt-config.h file to expose our target choice to the code." FORCE)
