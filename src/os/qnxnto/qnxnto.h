@@ -1,12 +1,12 @@
 /***************************************************************************
-  tag: FMTC  Tue Mar 11 21:49:19 CET 2008  fosi.h 
+  tag: Peter Soetens  Sat May 7 12:56:51 CEST 2005  qnxnto.h
 
-                        fosi.h -  description
+                        qnxnto.h -  description
                            -------------------
-    begin                : Tue March 11 2008
-    copyright            : (C) 2008 FMTC
-    email                : peter.soetens@fmtc.be
- 
+    begin                : Sat May 07 2005
+    copyright            : (C) 2005 Peter Soetens
+    email                : peter.soetens@mech.kuleuven.ac.be
+
  ***************************************************************************
  *   This library is free software; you can redistribute it and/or         *
  *   modify it under the terms of the GNU General Public                   *
@@ -34,35 +34,11 @@
  *   Suite 330, Boston, MA  02111-1307  USA                                *
  *                                                                         *
  ***************************************************************************/
- 
- 
-#include "../rtt-config.h"
-
-#ifdef OROPKG_OS_GNULINUX
- #include "gnulinux/fosi.h"
-#endif
-
-#ifdef OROPKG_OS_LXRT
- #include "lxrt/fosi.h"
-#endif
 
 
-#ifdef OROPKG_OS_XENOMAI
- #include "xenomai/fosi.h"
-#endif
 
-#ifdef OROPKG_OS_ECOS
- #include "ecos/fosi.h"
-#endif
-
-#ifdef OROPKG_OS_MACOSX
-  #include "macosx/fosi.h"
-#endif
-
-#ifdef OROPKG_OS_WIN32
-  #include "win32/fosi.h"
-#endif
-
-#ifdef OROPKG_OS_QNXNTO
- #include "qnxnto/fosi.h"
-#endif
+/**
+ * @file qnxnto.h
+ * This file indicates that the qnxnto version of
+ * orocos headers is installed.
+ */
