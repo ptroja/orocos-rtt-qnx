@@ -9,4 +9,6 @@
 #ifdef _MSC_VER
 #include "../rtt-config.h"
 RTT_API double rint( double value );
+#elif defined(__QNXNTO__)
+using std::rint;
 #endif

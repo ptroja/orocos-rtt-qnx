@@ -5,8 +5,8 @@
 *	Author: David Yu					*
 *										*
 ****************************************/
-#include "os/rint.h"
 #include <cmath>
+#include "os/rint.h"
 
 #ifdef _MSC_VER
 double rint( double value )
