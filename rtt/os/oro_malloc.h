@@ -13,10 +13,10 @@
 #else
 
 #include <cstdlib>
-#define oro_rt_malloc malloc
-#define oro_rt_free  free
-#define oro_rt_realloc realloc
-#define oro_rt_calloc rt_calloc
+#define oro_rt_malloc std::malloc
+#define oro_rt_free std::free
+#define oro_rt_realloc std::realloc
+#define oro_rt_calloc std::rt_calloc
 
 #endif
 
